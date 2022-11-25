@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-<<<<<<< HEAD
-    
-=======
->>>>>>> 07347639b5ee00bd01382269973404b1fe0547e1
+
     [Header("Chacter Speeds")]
     [SerializeField] float speed;
     [SerializeField] float jumpSpeed;
@@ -48,8 +45,4 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
             rig2d.velocity = new Vector2(rig2d.velocity.x, jumpSpeed);
     }
-<<<<<<< HEAD
-    
-=======
->>>>>>> 07347639b5ee00bd01382269973404b1fe0547e1
 }

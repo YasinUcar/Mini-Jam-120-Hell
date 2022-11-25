@@ -48,7 +48,7 @@ public class DusmanHareket : MonoBehaviour
 
             transform.position = Vector2.MoveTowards(transform.position, AnaKarakterTakip.position, speed * Time.deltaTime);
 
-            Debug.Log("foksiyon çalýþ");
+            Debug.Log("foksiyon ï¿½alï¿½ï¿½");
         }
     }
 
@@ -67,9 +67,9 @@ public class DusmanHareket : MonoBehaviour
         if (takipEdiliyor == false)
         {
             SagYon = !SagYon;
-            Vector3 bakýsYonu = transform.localScale;
-            bakýsYonu.x *= -1;
-            transform.localScale = bakýsYonu;
+            Vector3 bakisYonu = transform.localScale;
+            bakisYonu.x *= -1;
+            transform.localScale = bakisYonu;
             speed *= -1;
             StartCoroutine(YonDegistirmeGecikkmeSuresi());
 
