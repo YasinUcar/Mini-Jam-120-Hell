@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class DusmanTemasEtmesi : MonoBehaviour
+public class EnemyContact : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)   
     {
