@@ -25,6 +25,7 @@ public class EnemyMovement : MonoBehaviour
     }
     void Move()
     {
+        //transform.Translate(Vector3.right * speed * Time.deltaTime);
         if (Vector2.Distance(transform.position, MainCharacterFollow.position) > followingDistance)
         {
             beingFollowed = false;
