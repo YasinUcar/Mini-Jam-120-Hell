@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,41 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &993116686 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7399690766044069077, guid: 5bd83b074cc878b4497b0703a89a474d, type: 3}
-  m_PrefabInstance: {fileID: 1701648639}
-  m_PrefabAsset: {fileID: 0}
---- !u!70 &993116694
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 993116686}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.10979295, y: 0.31816673}
-  m_Size: {x: 1.5661569, y: 1.7944298}
-  m_Direction: 1
---- !u!114 &993116701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 993116686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34f19c2c9292d5b4a8fa7ece22e558be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  jumpSpeed: 5
 --- !u!1 &1487771553
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,14 +229,6 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7399690766044069072, guid: 5bd83b074cc878b4497b0703a89a474d, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7399690766044069072, guid: 5bd83b074cc878b4497b0703a89a474d, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7399690766044069072, guid: 5bd83b074cc878b4497b0703a89a474d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.39
       objectReference: {fileID: 0}
@@ -311,44 +268,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7399690766044069075, guid: 5bd83b074cc878b4497b0703a89a474d, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7399690766044069077, guid: 5bd83b074cc878b4497b0703a89a474d, type: 3}
       propertyPath: m_Name
       value: 'Player '
       objectReference: {fileID: 0}
     - target: {fileID: 7399690766044069078, guid: 5bd83b074cc878b4497b0703a89a474d, type: 3}
       propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399690766044069084, guid: 5bd83b074cc878b4497b0703a89a474d, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399690766044069084, guid: 5bd83b074cc878b4497b0703a89a474d, type: 3}
+      propertyPath: m_GravityScale
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7399690766044069079, guid: 5bd83b074cc878b4497b0703a89a474d, type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7399690766044069079, guid: 5bd83b074cc878b4497b0703a89a474d, type: 3}
-      propertyPath: m_FlipY
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7399690766044069079, guid: 5bd83b074cc878b4497b0703a89a474d, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 365da0506b266724fa48fe9b8e6966c9, type: 3}
-    - target: {fileID: 7399690766044069079, guid: 5bd83b074cc878b4497b0703a89a474d, type: 3}
-      propertyPath: m_DrawMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7399690766044069079, guid: 5bd83b074cc878b4497b0703a89a474d, type: 3}
-      propertyPath: m_MaskInteraction
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7399690766044069079, guid: 5bd83b074cc878b4497b0703a89a474d, type: 3}
-      propertyPath: m_SpriteSortPoint
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7399690766044069074, guid: 5bd83b074cc878b4497b0703a89a474d, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bd83b074cc878b4497b0703a89a474d, type: 3}
 --- !u!1 &1915974659
 GameObject:
@@ -445,7 +381,7 @@ GameObject:
   - component: {fileID: 1938640764}
   - component: {fileID: 1938640763}
   - component: {fileID: 1938640762}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: zemin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
