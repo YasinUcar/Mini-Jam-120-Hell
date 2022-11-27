@@ -19,15 +19,15 @@ public class Lav : MonoBehaviour
     void Update()
     {
         LavRb.velocity = Vector2.up * speed * Time.deltaTime;
-        
+
     }
     IEnumerator bekle()
     {
-       
-    
+
+
         for (int i = 0; i < 100; i++)
         {
-           
+
             yield return new WaitForSeconds(2f);
             speed *= 1.02f;
         }

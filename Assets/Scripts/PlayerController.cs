@@ -9,14 +9,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] float jumpSpeed;
 
-
+    [SerializeField] private float climbingSpeed;
+    private bool Climbable;
     Rigidbody2D rig2d;
 
 
     CapsuleCollider2D myFeedCollider;
-
+    private void Awake()
+    {
+        Time.timeScale = 1f;
+    }
     private void Start()
     {
+
         rig2d = GetComponent<Rigidbody2D>();
         myFeedCollider = GetComponent<CapsuleCollider2D>();
         anim = gameObject.GetComponent<Animator>();
@@ -28,7 +33,7 @@ public class PlayerController : MonoBehaviour
         Run();
         FlipSprite();
         Jump();
-
+        Climbing_();
     }
 
     void Run()
@@ -54,7 +59,6 @@ public class PlayerController : MonoBehaviour
     {
         if (!myFeedCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
-            anim.SetTrigger("idle2");
             return;
         }
         if (Input.GetButtonDown("Jump"))
@@ -63,5 +67,41 @@ public class PlayerController : MonoBehaviour
             anim.SetTrigger("jump");
         }
 
+    }
+    private void Climbing_()
+    {
+        if (Climbable)
+        {
+            rig2d.gravityScale = 0;
+            rig2d.velocity = Vector2.up * climbingSpeed;
+            Debug.Log("merdivene ��kmaya ba�la");
+        }
+        else
+        {
+            rig2d.gravityScale = 1;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Merdiven"))
+        {
+            Climbable = true;
+        }
+        Debug.Log("merdivene ��kmaya ba�la");
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Merdiven"))
+        {
+            Climbable = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Merdiven"))
+        {
+            Climbable = false;
+        }
     }
 }
